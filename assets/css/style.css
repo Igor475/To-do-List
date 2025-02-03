@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    background-color: #18181a;
+    color: rgb(225, 231, 235);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 460px;
+    width: 100%;
+    margin: 50px auto auto auto;
+    padding: 0 20px;
+}
+
+.container .container-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+}
+
+.container .container-list ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+.container .container-list ul .flex-items {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-bottom: 1px dashed rgb(225, 231, 235, .3);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container .container-list ul .flex-items.active {
+    background-color: #2f2f2f;
+    text-decoration: line-through;
+    border-radius: 5px;
+}
+
+.container .container-list ul .flex-items .checkbox-task {
+    margin-right: 10px;
+    position: relative;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #333;
+    border-radius: 4px;
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.container .container-list ul .flex-items .checkbox-task:checked {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.container .container-list ul .flex-items .checkbox-task:checked::before {
+    content: "✔";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    color: white;
+
+}
+
+.container .container-list ul .flex-items li {
+    flex: 1;
+    text-align: left;
+    font-size: 14px;
+}
+
+.container .container-list ul .flex-items .btn-remove {
+    margin-left: 10px;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    font-size: 11px;
+    color: white;
+    border: 1px solid #dc3545;
+    background-color: #dc3545;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .container-list ul .flex-items .btn-edit {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    font-size: 11px;
+    color: white;
+    border: 1px solid #007bff;
+    background-color: #007bff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .container-list ul .flex-items .btn-remove:hover {
+    filter: brightness(120%);
+}
+
+.container .container-list ul .flex-items .btn-edit:hover {
+    filter: brightness(120%);
+}
+
+.container .container-list .input-type {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid rgba(56, 56, 59);
+    outline: none;
+    color: rgb(225, 231, 235);
+}
+
+.container .container-list .area-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.container .container-list .add-button, 
+.container .container-list .edit-button {
+    padding: 12px 15px;
+    background-color: transparent;
+    border: 1px solid rgba(56, 56, 59);
+    color: rgb(225, 231, 235);
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .90px;
+    margin: auto;
+    transition: .2s ease-in;
+}
+
+.container .container-list .add-button:hover,
+.container .container-list .edit-button:hover {
+    background-color: rgb(225, 231, 235, .1);
+}
